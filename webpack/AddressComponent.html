@@ -1,0 +1,44 @@
+<article class="panel panel-default">
+  <header class="panel-heading">
+    <h2 class="h4">
+      <i class="glyphicon glyphicon-{{icon}}" aria-hidden="true"></i>
+      {{type}} Address
+    </h2>
+  </header>
+  <section class="panel-body">
+    <shine-text-field
+      bind-object="address"
+      field_name="street"
+      on-valueChanged="save($event)"
+      label="Street">
+    </shine-text-field>
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <shine-text-field
+          bind-object="address"
+          on-valueChanged="save($event)"
+          field_name="city"
+          label="City">
+        </shine-text-field>
+      </div>
+      <div class="col-md-2 col-xs-4">
+        <shine-text-field
+          bind-object="address"
+          compact="true"
+          field_name="state"
+          on-valueChanged="save($event)"
+          label="State">
+        </shine-text-field>
+      </div>
+      <div class="col-md-4 col-xs-8">
+        <shine-text-field
+          bind-object="address"
+          field_name="zipcode"
+          pattern="\d\d\d\d\d(-\d\d\d\d)?"
+          on-valueChanged="save($event)"
+          label="Zip">
+        </shine-text-field>
+      </div>
+    </div>
+  </section>
+</article>

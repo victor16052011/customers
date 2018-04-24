@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="well">
+        
+        <section  class=​ "search-results"​ >
+            <header>
+                <h1 class=​ "h3"​ >Results</h1>
+            </header>
+            <table  class=​ "table  table-striped"​ >
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last  Name</th>
+                        <th>Email</th>
+                        <th>Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ​ <%​   @customers.each ​ do​   |customer|  ​ %>                <tr>
+                            <td>​ <%=​  customer.first_name ​ %>​ </td>
+                            <td>​ <%=​  customer.last_name  ​ %>​ </td>
+                            <td>​ <%=​  customer.email  ​ %>​ </td>
+                            <td>​ <%=​  l customer.created_at.to_date ​ %>​ </td>
+                        </tr>
+                    ​ <%​    ​ end​    ​ %>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>

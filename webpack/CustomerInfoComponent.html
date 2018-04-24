@@ -1,0 +1,52 @@
+<article class="panel panel-primary">
+  <header class="panel-heading">
+    <h1 class="h3">
+    <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+      Customer
+    </h1>
+  </header>
+  <section class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <shine-text-field
+            bind-object="customer"
+            field_name="first_name"
+            on-valueChanged="save($event)"
+            label="First Name">
+          </shine-text-field>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <shine-text-field
+            bind-object="customer"
+            field_name="last_name"
+            on-valueChanged="save($event)"
+            label="Last Name">
+          </shine-text-field>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <shine-text-field
+            addon="@"
+            bind-object="customer"
+            field_name="username"
+            on-valueChanged="save($event)"
+            label="Username">
+          </shine-text-field>
+      </div>
+    </div>
+    <div class="form-group">
+      <shine-text-field
+        bind-object="customer"
+        field_name="email"
+        on-valueChanged="save($event)"
+        label="E-mail">
+      </shine-text-field>
+    </div>
+  </section>
+  <footer class="panel-footer">
+    <label for="joined">Joined:</label> {{customer.joined_at | date }}
+  </footer>
+</article>
